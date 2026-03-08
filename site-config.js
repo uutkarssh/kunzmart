@@ -44,7 +44,7 @@ const KUNZMART_CONFIG = {
      highlightNote: Small text below the highlight number
   ───────────────────────────────────────────────────────────── */
   offer: {
-    visible       : true,
+    visible       : false,
     badge         : "Exclusive Promotion",
     heading       : "Shop for ₹499 & Win Exciting Prizes",
     body          : "Every purchase above ₹499 enters you into our exclusive Lucky Draw. Grand prize is a brand-new Scooty — plus refrigerators, LED TVs and more!",
