@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Experience the Kunz Mart difference – bright LED aisles, modern interiors, and a premium shopping atmosphere in Gopiganj, Bhadohi." />
+  <title>Store Experience · Kunz Mart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="site-config.js"></script>
+  <style>
+    .exp-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 70% 50%,rgba(201,168,76,.08),transparent 60%),radial-gradient(ellipse 40% 50% at 20% 30%,rgba(245,235,210,.6),transparent 50%)}
+    .exp-hero-content{position:relative;z-index:2}
+    .exp-hero-label{margin-bottom:20px}
+    .exp-hero-title{font-family:var(--font-display);font-size:clamp(44px,6vw,80px);font-weight:300;color:var(--charcoal);line-height:1.05;margin-bottom:24px}
+    .exp-hero-title em{font-style:italic;color:var(--gold)}
+    .exp-hero-desc{font-size:18px;font-weight:300;line-height:1.8;color:var(--charcoal-2);max-width:600px}
+
+    /* Features */
+    .exp-features{padding:100px 0;background:var(--ivory)}
+    .exp-feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:80px}
+    .exp-feature-card{background:var(--warm-white);border:1px solid rgba(201,168,76,.1);border-radius:var(--radius-xl);padding:48px 36px;transition:box-shadow .35s,transform .35s var(--spring)}
+    .exp-feature-card:hover{box-shadow:0 16px 56px rgba(44,40,37,.10);transform:translateY(-4px)}
+    /* FIX: SVG icon box replaces emoji */
+    .exp-feature-icon{width:56px;height:56px;background:linear-gradient(135deg,var(--gold-pale),rgba(201,168,76,.15));border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--gold-dark);margin-bottom:24px;border:1px solid rgba(201,168,76,.2)}
+    .exp-feature-icon svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+    .exp-feature-title{font-family:var(--font-display);font-size:26px;font-weight:400;color:var(--charcoal);margin-bottom:14px}
+    .exp-feature-text{font-size:15px;font-weight:300;line-height:1.75;color:var(--charcoal-2)}
+
+    /* Story */
+    .exp-story{padding:100px 0;background:var(--ivory-2)}
+    .exp-story-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .exp-story-heading{font-family:var(--font-display);font-size:clamp(36px,4vw,56px);font-weight:300;line-height:1.1;color:var(--charcoal);margin-bottom:28px}
+    .exp-story-heading em{font-style:italic;color:var(--gold)}
+    .exp-story-text{font-size:16px;font-weight:300;line-height:1.85;color:var(--charcoal-2);margin-bottom:20px}
+    .exp-story-visual{border-radius:var(--radius-xl);height:480px;background:linear-gradient(135deg,#f0e4c8,#e0cfa8,#d4c090);position:relative;overflow:hidden;box-shadow:0 32px 80px rgba(44,40,37,.12)}
+
+    @media(max-width:768px){
+      .exp-feature-grid{grid-template-columns:1fr}
+      .exp-story-layout{grid-template-columns:1fr}
+      .exp-story-visual{display:none}
+    }
+    @media(min-width:769px) and (max-width:1024px){
+      .exp-feature-grid{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <nav class="navbar" role="navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-main">Kunz Mart</span>
+        <span class="nav-logo-sub">आपका बचत, हमारी लक्ष्य</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="departments.html">Departments</a></li>
+        <li><a href="branches.html">Branches</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="exp-hero">
+    <div class="exp-hero-bg" aria-hidden="true"></div>
+    <div class="container exp-hero-content">
+      <div class="section-label exp-hero-label reveal">The Kunz Mart Experience</div>
+      <h1 class="exp-hero-title reveal" data-delay="100">
+        More Than a<br>Store — It's a<br><em>Destination</em>
+      </h1>
+      <p class="exp-hero-desc reveal" data-delay="200">
+        We designed Kunz Mart from the ground up to feel different — a space
+        where shopping is a pleasure, where families linger, and where every
+        visit feels like coming home.
+      </p>
+    </div>
+  </section>
+
+  <!-- FEATURES — FIX: SVG icons replace emojis -->
+  <section class="exp-features">
+    <div class="container">
+      <div class="exp-feature-grid" data-stagger>
+
+        <div class="exp-feature-card">
+          <div class="exp-feature-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </div>
+          <div class="exp-feature-title">Brilliant LED Lighting</div>
+          <p class="exp-feature-text">Our store is bathed in warm, bright LED lighting that makes every product look its best and keeps the atmosphere welcoming at any hour of the day.</p>
+        </div>
+
+        <div class="exp-feature-card">
+          <div class="exp-feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><line x1="12" y1="16" x2="16" y2="16"/></svg>
+          </div>
+          <div class="exp-feature-title">Wide, Open Aisles</div>
+          <p class="exp-feature-text">Generously spaced aisles mean you can browse with a trolley, a stroller, or simply at a leisurely pace — never rushed, never cramped.</p>
+        </div>
+
+        <div class="exp-feature-card">
+          <div class="exp-feature-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="exp-feature-title">Spotless Clean Floors</div>
+          <p class="exp-feature-text">Our gleaming, polished floors reflect our commitment to cleanliness and our respect for every customer who walks through our doors.</p>
+        </div>
+
+        <div class="exp-feature-card">
+          <div class="exp-feature-icon">
+            <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          </div>
+          <div class="exp-feature-title">Organised Sections</div>
+          <p class="exp-feature-text">Every department is clearly signed and logically laid out, so you find exactly what you need without wandering. Each in its own premium space.</p>
+        </div>
+
+        <div class="exp-feature-card">
+          <div class="exp-feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="exp-feature-title">Family-Centred Design</div>
+          <p class="exp-feature-text">From the moment you walk in, Kunz Mart feels designed for families — comfortable, welcoming, and stocked with something for every member.</p>
+        </div>
+
+        <div class="exp-feature-card">
+          <div class="exp-feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="exp-feature-title">Premium Retail Standards</div>
+          <p class="exp-feature-text">We maintain the hygiene, display quality, and service standards of the finest retail brands — right here in the heart of Gopiganj.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="exp-story">
+    <div class="container">
+      <div class="exp-story-layout">
+        <div>
+          <div class="section-label reveal" style="margin-bottom:20px;">Our Story</div>
+          <h2 class="exp-story-heading reveal" data-delay="100">
+            Built for<br><em>Bhadohi's</em><br>Families
+          </h2>
+          <p class="exp-story-text reveal" data-delay="200">
+            Kunz Mart was born from a simple belief: the people of Bhadohi deserve
+            a world-class shopping experience without having to travel far. We took
+            that belief and built it into every tile, every shelf, and every display.
+          </p>
+          <p class="exp-story-text reveal" data-delay="280">
+            Today, with two thriving branches in Gopiganj, we serve thousands of
+            families every month — offering premium products at honest prices in an
+            environment that feels genuinely special.
+          </p>
+          <a href="branches.html" class="btn-primary reveal" data-delay="360" style="display:inline-flex;margin-top:16px;">
+            Find a Branch <span class="btn-arrow">→</span>
+          </a>
+        </div>
+
+        <div class="exp-story-visual reveal" data-delay="150">
+          <!-- Simulated store art -->
+          <div style="position:absolute;top:0;left:0;right:0;height:8px;background:linear-gradient(90deg,transparent,rgba(255,250,220,.8),transparent,rgba(255,250,220,.8),transparent);"></div>
+          <div style="position:absolute;top:8px;left:25%;width:1px;height:60%;background:linear-gradient(to bottom,rgba(255,250,200,.5),transparent);transform:rotate(3deg);"></div>
+          <div style="position:absolute;top:8px;left:50%;width:1px;height:70%;background:linear-gradient(to bottom,rgba(255,250,200,.5),transparent);"></div>
+          <div style="position:absolute;top:8px;left:75%;width:1px;height:55%;background:linear-gradient(to bottom,rgba(255,250,200,.5),transparent);transform:rotate(-3deg);"></div>
+          <div style="position:absolute;top:20%;left:10%;right:10%;height:45px;background:rgba(255,255,255,.18);border-top:2px solid rgba(201,168,76,.3);border-bottom:2px solid rgba(201,168,76,.3);border-radius:4px;"></div>
+          <div style="position:absolute;top:38%;left:10%;right:10%;height:45px;background:rgba(255,255,255,.18);border-top:2px solid rgba(201,168,76,.3);border-bottom:2px solid rgba(201,168,76,.3);border-radius:4px;"></div>
+          <div style="position:absolute;top:56%;left:10%;right:10%;height:45px;background:rgba(255,255,255,.18);border-top:2px solid rgba(201,168,76,.3);border-bottom:2px solid rgba(201,168,76,.3);border-radius:4px;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;height:30%;background:linear-gradient(to top,rgba(255,255,255,.3),transparent);"></div>
+          <svg style="position:absolute;bottom:0;left:0;right:0;width:100%;height:30%;opacity:.2;" viewBox="0 0 400 120" preserveAspectRatio="none">
+            <line x1="200" y1="0" x2="0"   y2="120" stroke="#c9a84c" stroke-width="1"/>
+            <line x1="200" y1="0" x2="100" y2="120" stroke="#c9a84c" stroke-width=".7"/>
+            <line x1="200" y1="0" x2="200" y2="120" stroke="#c9a84c" stroke-width="1"/>
+            <line x1="200" y1="0" x2="300" y2="120" stroke="#c9a84c" stroke-width=".7"/>
+            <line x1="200" y1="0" x2="400" y2="120" stroke="#c9a84c" stroke-width="1"/>
+          </svg>
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;">
+            <div style="font-family:var(--font-display);font-size:40px;font-weight:400;color:rgba(44,40,37,.25);letter-spacing:.06em;">Kunz Mart</div>
+            <div style="font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:rgba(201,168,76,.5);margin-top:4px;">Premium Retail Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-name">Kunz Mart</div>
+          <div class="footer-brand-tag">आपका बचत, हमारी लक्ष्य · Gopiganj · Bhadohi</div>
+          <p class="footer-brand-desc">A modern family retail destination in the heart of Bhadohi.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" style="fill:currentColor;stroke:none"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html">→ Home</a></li>
+            <li><a href="experience.html">→ Experience</a></li>
+            <li><a href="departments.html">→ Departments</a></li>
+            <li><a href="branches.html">→ Branches</a></li>
+            <li><a href="gallery.html">→ Gallery</a></li>
+            <li><a href="contact.html">→ Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Departments</div>
+          <ul class="footer-links">
+            <li><a href="departments.html">Men's Fashion</a></li>
+            <li><a href="departments.html">Women's Wear</a></li>
+            <li><a href="departments.html">Kids Wear</a></li>
+            <li><a href="departments.html">Grocery</a></li>
+            <li><a href="departments.html">Household</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Visit Us</div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span class="footer-contact-text">Krishna Complex, Gopiganj, Bhadohi, UP</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .82h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></span>
+            <span class="footer-contact-text">+91 98765 43210</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+            <span class="footer-contact-text">9AM – 9PM Daily</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2025 <span>Kunz Mart</span>. All Rights Reserved · Bhadohi, UP</div>
+        <div class="footer-tagline">आपका बचत, हमारी लक्ष्य — Aapka Bachat, Hamari Lakshya</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

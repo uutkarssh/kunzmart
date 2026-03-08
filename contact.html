@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Kunz Mart – get in touch with our team in Gopiganj, Bhadohi, Uttar Pradesh." />
+  <title>Contact Us · Kunz Mart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="site-config.js"></script>
+  <style>
+    .contact-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 70% 50%,rgba(201,168,76,.07),transparent 60%)}
+    .contact-hero-title{font-family:var(--font-display);font-size:clamp(44px,6vw,80px);font-weight:300;line-height:1.05;color:var(--charcoal);margin-top:16px;margin-bottom:20px}
+    .contact-hero-title em{font-style:italic;color:var(--gold)}
+    .contact-section{padding:100px 0 120px}
+    .contact-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;align-items:start}
+    .contact-info{display:flex;flex-direction:column;gap:20px}
+    .contact-info-card{background:var(--warm-white);border:1px solid rgba(201,168,76,.1);border-radius:var(--radius-lg);padding:28px 32px;transition:box-shadow .35s,transform .35s var(--spring)}
+    .contact-info-card:hover{box-shadow:0 12px 40px rgba(44,40,37,.08);transform:translateY(-3px)}
+    /* FIX: SVG icon box replaces emoji */
+    .contact-info-icon{width:40px;height:40px;background:var(--gold-pale);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--gold-dark);margin-bottom:12px}
+    .contact-info-icon svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .contact-info-title{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:8px}
+    .contact-info-text{font-size:15px;font-weight:300;line-height:1.7;color:var(--charcoal)}
+    .contact-info-link{color:var(--charcoal);text-decoration:none;border-bottom:1px solid rgba(201,168,76,.3);transition:border-color .3s,color .3s}
+    .contact-info-link:hover{color:var(--gold-dark);border-color:var(--gold)}
+    .contact-form-card{background:var(--warm-white);border:1px solid rgba(201,168,76,.1);border-radius:var(--radius-xl);padding:56px;box-shadow:0 4px 32px rgba(44,40,37,.06)}
+    .contact-form-title{font-family:var(--font-display);font-size:38px;font-weight:400;color:var(--charcoal);margin-bottom:8px}
+    .contact-form-subtitle{font-size:15px;font-weight:300;color:var(--charcoal-2);margin-bottom:40px;line-height:1.6}
+    .form-group{margin-bottom:24px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .form-label{display:block;font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--charcoal-2);margin-bottom:8px}
+    .form-input,.form-select,.form-textarea{width:100%;background:var(--ivory);border:1px solid var(--beige);border-radius:var(--radius-md);padding:14px 18px;font-family:var(--font-body);font-size:15px;font-weight:300;color:var(--charcoal);transition:border-color .3s,box-shadow .3s;outline:none;-webkit-appearance:none}
+    .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(201,168,76,.1)}
+    .form-textarea{min-height:130px;resize:vertical}
+    .form-select{background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a9186' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px;cursor:pointer}
+    .form-submit{width:100%;padding:18px;background:var(--charcoal);color:var(--ivory);border:none;border-radius:100px;font-family:var(--font-body);font-size:15px;font-weight:400;letter-spacing:.08em;cursor:pointer;transition:background .35s,transform .35s var(--spring),box-shadow .35s;box-shadow:0 4px 20px rgba(44,40,37,.2)}
+    .form-submit:hover{background:var(--gold-dark);transform:translateY(-3px);box-shadow:0 8px 32px rgba(201,168,76,.3)}
+    .form-note{text-align:center;margin-top:16px;font-size:12px;font-weight:300;color:var(--warm-grey)}
+    .contact-map-wrap{height:420px;overflow:hidden}
+    .contact-map-wrap iframe{width:100%;height:100%;border:none;filter:saturate(.8)}
+    @media(max-width:768px){.contact-layout{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.contact-form-card{padding:36px 24px}}
+  </style>
+</head>
+<body>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-main">Kunz Mart</span>
+        <span class="nav-logo-sub">आपका बचत, हमारी लक्ष्य</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="departments.html">Departments</a></li>
+        <li><a href="branches.html">Branches</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="contact-hero-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-label reveal">Get in Touch</div>
+      <h1 class="contact-hero-title reveal" data-delay="100">We're Always<br><em>Here</em> for You</h1>
+      <p class="reveal" data-delay="200" style="font-size:18px;font-weight:300;line-height:1.8;color:var(--charcoal-2);max-width:520px;">
+        Have a question, feedback, or want to know more about a product?
+        Our friendly team is happy to help.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Info cards — FIX: SVG icons, plain email -->
+        <div class="contact-info">
+          <div class="contact-info-card reveal" data-delay="100">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-info-title">Krishna Complex (Main)</div>
+            <div class="contact-info-text">Krishna Complex, Station Road,<br>Gopiganj, Bhadohi, UP – 221 303</div>
+          </div>
+          <div class="contact-info-card reveal" data-delay="150">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-info-title">Subhash Nagar Branch</div>
+            <div class="contact-info-text">Near Subhash Nagar Chowk,<br>Gopiganj, Bhadohi, UP – 221 303</div>
+          </div>
+          <div class="contact-info-card reveal" data-delay="200">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .82h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div class="contact-info-title">Phone Numbers</div>
+            <div class="contact-info-text">
+              <a href="tel:+919876543210" class="contact-info-link">+91 98765 43210</a> · Krishna Complex<br>
+              <a href="tel:+919876543211" class="contact-info-link">+91 98765 43211</a> · Subhash Nagar
+            </div>
+          </div>
+          <div class="contact-info-card reveal" data-delay="250">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact-info-title">Email</div>
+            <!-- FIX: plain email address, no Cloudflare obfuscation -->
+            <div class="contact-info-text"><a href="mailto:hello@kunzmart.in" class="contact-info-link">hello@kunzmart.in</a></div>
+          </div>
+          <div class="contact-info-card reveal" data-delay="300">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="contact-info-title">Store Hours</div>
+            <div class="contact-info-text">Monday – Saturday: 9:00 AM – 9:00 PM<br>Sunday: 10:00 AM – 8:00 PM</div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-card reveal" data-delay="150">
+          <h2 class="contact-form-title">Send Us a Message</h2>
+          <p class="contact-form-subtitle">Fill in the form below and we'll get back to you within 24 hours.</p>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="firstName">First Name</label>
+                <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lastName">Last Name</label>
+                <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Last name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone Number</label>
+              <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="branch">Preferred Branch</label>
+              <select class="form-select" id="branch" name="branch">
+                <option value="">Select a branch</option>
+                <option value="krishna">Krishna Complex (Main)</option>
+                <option value="subhash">Subhash Nagar Market</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Your Message</label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="How can we help you today?"></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message →</button>
+            <p class="form-note">We respect your privacy. Your information will never be shared.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Map — FIX: correct coordinates -->
+  <div class="contact-map-wrap">
+    <iframe
+      src="https://maps.google.com/maps?q=25.2889571,82.4338511&z=16&output=embed"
+      allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Kunz Mart Map"
+    ></iframe>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-name">Kunz Mart</div>
+          <div class="footer-brand-tag">आपका बचत, हमारी लक्ष्य · Gopiganj · Bhadohi</div>
+          <p class="footer-brand-desc">A modern family retail destination in the heart of Bhadohi.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" style="fill:currentColor;stroke:none"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html">→ Home</a></li>
+            <li><a href="experience.html">→ Experience</a></li>
+            <li><a href="departments.html">→ Departments</a></li>
+            <li><a href="branches.html">→ Branches</a></li>
+            <li><a href="gallery.html">→ Gallery</a></li>
+            <li><a href="contact.html">→ Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Departments</div>
+          <ul class="footer-links">
+            <li><a href="departments.html">Men's Fashion</a></li>
+            <li><a href="departments.html">Women's Wear</a></li>
+            <li><a href="departments.html">Grocery</a></li>
+            <li><a href="departments.html">Household</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span class="footer-contact-text">Gopiganj, Bhadohi, UP</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .82h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></span>
+            <span class="footer-contact-text">+91 98765 43210</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+            <span class="footer-contact-text">9AM – 9PM Daily</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2025 <span>Kunz Mart</span>. All Rights Reserved · Bhadohi, UP</div>
+        <div class="footer-tagline">आपका बचत, हमारी लक्ष्य — Aapka Bachat, Hamari Lakshya</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('.form-submit');
+      btn.textContent = 'Message Sent ✓';
+      btn.style.background = 'var(--gold-dark)';
+      btn.style.transform = 'translateY(-2px)';
+      btn.disabled = true;
+          setTimeout(() => {
+        btn.textContent = 'Send Message →';
+        btn.style.background = '';
+        btn.style.transform = '';
+        btn.disabled = false;
+        this.reset();
+      }, 4000);
+    });
+  </script>
+</body>
+</html>
