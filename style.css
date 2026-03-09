@@ -304,7 +304,7 @@ img,iframe,svg{display:block}
    ════════════════════════════════════════ */
 .section-departments{padding:120px 0;background:linear-gradient(180deg,var(--ivory),var(--ivory-2))}
 .dept-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.dept-card{background:var(--warm-white);border:1px solid rgba(201,168,76,.1);border-radius:var(--radius-lg);padding:36px 28px 52px;cursor:pointer;transition:transform .45s var(--spring),box-shadow .45s,border-color .35s;position:relative;overflow:hidden;text-decoration:none;display:block}
+.dept-card{background:var(--warm-white);border:1px solid rgba(201,168,76,.1);border-radius:var(--radius-lg);padding:36px 28px 64px;cursor:pointer;transition:transform .45s var(--spring),box-shadow .45s,border-color .35s;position:relative;overflow:hidden;text-decoration:none;display:block}
 .dept-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,168,76,.06),transparent 60%);opacity:0;transition:opacity .4s}
 .dept-card:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 24px 64px rgba(44,40,37,.12),0 4px 0 var(--gold);border-color:rgba(201,168,76,.3)}
 .dept-card:hover::before{opacity:1}
@@ -315,7 +315,7 @@ img,iframe,svg{display:block}
 .dept-card:hover .dept-icon{transform:scale(1.1) rotate(-3deg)}
 .dept-name{font-family:var(--font-display);font-size:22px;font-weight:400;color:var(--charcoal);margin-bottom:10px;line-height:1.15}
 .dept-desc{font-size:13px;font-weight:300;color:var(--charcoal-2);line-height:1.65}/* FIX: was --warm-grey */
-.dept-arrow{position:absolute;bottom:24px;right:24px;width:34px;height:34px;border:1px solid var(--beige-mid);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--charcoal-2);transition:background .3s,border-color .3s,transform .4s var(--spring)}
+.dept-arrow{position:absolute;bottom:16px;right:20px;width:34px;height:34px;border:1px solid var(--beige-mid);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--charcoal-2);transition:background .3s,border-color .3s,transform .4s var(--spring)}
 .dept-card:hover .dept-arrow{background:var(--gold);border-color:var(--gold);color:var(--warm-white);transform:translateX(3px)}
 
 /* ════════════════════════════════════════
@@ -537,7 +537,7 @@ footer{background:var(--charcoal);padding:80px 0 40px;position:relative;overflow
   .footer-bottom{flex-direction:column;gap:8px;text-align:center}
   .section-heading{font-size:32px}
   .dept-grid{grid-template-columns:1fr 1fr;gap:12px}
-  .dept-card{padding:22px 16px 44px}
+  .dept-card{padding:22px 16px 60px}
   .dept-name{font-size:18px}
   .prizes-grid{grid-template-columns:1fr}
   .prize-card.featured{flex-direction:column;gap:16px}
