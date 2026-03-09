@@ -45,8 +45,6 @@ a{color:inherit}
 img,iframe,svg{display:block}
 
 /* ── Cursor ────────────────────────────────────────────────── */
-.cursor-dot{width:8px;height:8px;background:var(--gold);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s,opacity .3s}
-.cursor-ring{width:36px;height:36px;border:1.5px solid var(--gold);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .18s var(--ease),width .3s,height .3s,opacity .3s;opacity:.6}
 
 /* ── Utilities ─────────────────────────────────────────────── */
 .container{max-width:1280px;margin:0 auto;padding:0 48px}
